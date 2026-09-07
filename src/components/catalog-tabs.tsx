@@ -48,11 +48,10 @@ export function CatalogTabs({
               href={storeBase(master, store.slug)}
               data-catalog-link={store.slug}
               className={[
-                "inline-flex rounded-full border px-3 py-1 text-sm hover:bg-muted",
+                "rounded-full border px-3 py-1 text-sm hover:bg-muted",
                 active
-                  ? "border-foreground bg-foreground text-background hover:bg-foreground/90"
-                  : "border-border bg-background",
-                active ? "" : "hidden group-has-[:checked]/catalogs:inline-flex",
+                  ? "inline-flex border-foreground bg-foreground text-background hover:bg-foreground/90"
+                  : "hidden border-border bg-background group-has-[:checked]/catalogs:inline-flex",
               ].join(" ")}
             >
               {store.name}

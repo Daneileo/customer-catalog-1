@@ -231,7 +231,7 @@ function parseCategoryTree(
     children: NavCategory[] = []
   ): NavCategory | null => {
     const yupooId = parseCategoryId(href);
-    if (!yupooId) return null;
+    if (!yupooId || yupooId === "0") return null;
     const cleanName = name.replace(/\s+/g, " ").trim();
     if (!cleanName) return null;
     if (isHiddenCategory(shop.slug, cleanName, master)) return null;
